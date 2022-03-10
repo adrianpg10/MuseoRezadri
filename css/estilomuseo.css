@@ -1,0 +1,2070 @@
+* {
+    box-sizing: border-box;
+    /*Le añadiremos una fuente a toda la pagina*/
+    font-family: 'Courier Prime', monospace;
+}
+
+/*Damos color de fondo al body*/
+
+body {
+    background-color: #E3E3E3;
+}
+
+/*-------------CABECERA--------------*/
+
+/*Haremos la cabecera flexible por columnas*/
+
+header {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Haremos el contedor flexible y enviaremos el contenido a la derecha
+Le daremos un color y lo alinearemos en el centro verticalmente*/
+
+header nav#redes-sociales {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    background-color: #2C2C2C;
+    align-items: center;
+}
+
+
+/*Le daremos un tamaño a las imagenes y un margen*/
+
+header nav#redes-sociales a img {
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+}
+
+/*Le daremos margen a la segunda imagen del contenedor*/
+
+header nav#redes-sociales a img:nth-child(2) {
+    margin-left: 2rem;
+}
+
+/*Al parrafo del contenedor le daremos un tamaño, le asignaremos color,
+un padding y un borde*/
+
+nav#redes-sociales p {
+    padding-right: 2rem;
+    font-size: 0.7rem;
+    color: white;
+    border-right: 3px solid #C42C2C;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+/*Haremos flexible el contenedor en formato filas,alinearemos los items centrados de manera vertical,
+le daremos borde al contenedor,tamaño y un color de fondo.
+*/
+
+header nav#menu-principal {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    border: 1px solid #2C2C2C;
+    height: 5.5rem;
+    background-color: white;
+}
+
+/*Le daremos un tamaño a la imagen y un margen*/
+
+header nav#menu-principal picture img#bolsacompra {
+    height: 3rem;
+    width: 2.3rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+/*Le daremos un tamaño a la imagen y margenes*/
+
+header nav#menu-principal label img#lupa {
+    height: 3rem;
+    width: 2.5rem;
+    margin-right: 0.6rem;
+    margin-left: 0.6rem;
+    cursor: pointer;
+}
+
+/*Haremos flexible el contenedor en formato fila,asignaremos color de fondo,le daremos forma al borde,
+le daremos tamaño a la fuente y un color*/
+
+header nav#menu-principal input+nav#login {
+    display: flex;
+    flex-flow: row;
+    background-color: #2C2C2C;
+    border-radius: 0.5rem;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-left: auto;
+    align-items: center;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+/*Le daremos tamaño y margen al span del contenedor*/
+
+header nav#menu-principal nav#login span {
+    font-size: 1rem;
+    margin-right: 0.4rem;
+    cursor: pointer;
+}
+
+/*Le daremos tamaño y margen a la imagen del contenedor*/
+
+header nav#menu-principal nav#login label picture img {
+    height: 1.2rem;
+    width: 1.3rem;
+    margin-left: 0.4rem;
+    cursor: pointer;
+}
+
+/*Le daremos tamaño y margen a la hamburguesa*/
+
+header nav#menu-principal picture img#hamburguesa {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    cursor: pointer;
+}
+
+/*Lo haremos flexible en formato columnas, le aplicaremos un margen y un tamaño*/
+
+
+h1.nombremuseo a{
+    text-decoration: none;
+    color:black;
+    display: flex;
+    flex-flow: column;
+}
+
+/*Ocultamos los inputs de tipo checked*/
+
+header input#lupa-busca {
+    display: none;
+}
+
+header input#login-menu {
+    display: none;
+}
+
+/*Le asignamos un tamaño al buscador,color,borde...
+También le asignamos una posición, que en este caso estará oculto */
+
+header input#buscador {
+    transition-duration: 0.3s;
+    width: 100%;
+    height: 3rem;
+    top: 8.4rem;
+    left: -800vw;
+    position: absolute;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 0.2rem;
+    padding-left: 1rem;
+    color: #2C2C2C;
+    z-index: 10001;
+}
+
+/*Modificamos el color y el tamaño del input buscador*/
+
+input#buscador::placeholder {
+    color: #2C2C2C;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/*Cuando hagamos clic en el label, pondremos el buscador en la posicion 0
+que será visible*/
+
+header input#lupa-busca:checked+label+input#buscador {
+    left: 0rem;
+}
+
+/*--------MENU LOGIN---------*/
+
+/*Lo haremos absoluto para poder ocultarlo, le asignaremos tamaño, color...
+y lo ocultaremos*/
+
+header nav#menu-principal nav#autenticacion {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0rem;
+    left: -800vw;
+    background-color: #E3E3E3;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #2C2C2C;
+    border-radius: 1rem;
+    z-index: 10001;
+}
+
+/*Haremos flexible el contenedor de la cabecera del login.
+Le daremos tamaño y color*/
+
+header nav#menu-principal nav#autenticacion nav#cabeceralogin {
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    padding-top: 0.9rem;
+}
+
+/*Le asignaremos un tamaño a las imagenes de la cabecera del login*/
+
+header nav#menu-principal nav#autenticacion nav#cabeceralogin img {
+    width: 3rem;
+    height: 2rem;
+}
+
+/*Le asignaremos un tamaño al contenedor que contiene el logo y le asignaremos un 
+margen*/
+
+header nav#menu-principal nav#autenticacion nav#cabeceralogin picture#mrlogo {
+    flex: 80%;
+    margin-left: 2.2rem;
+}
+
+/*Le asignaremos el tamaño y el color al parrafo.
+También lo colocaremos en la ultima posicion del contenedor padre*/
+
+header nav#menu-principal nav#autenticacion nav#cabeceralogin p {
+    flex: 100%;
+    order: 1;
+    background-color: #2C2C2C;
+    color: white;
+    margin-bottom: auto;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.3rem;
+}
+
+/*Colocaremos la X a la derecha y le haremos un cursor pointer*/
+
+header nav#menu-principal nav#autenticacion nav#cabeceralogin label {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/*Daremos color y forma a las secciones del login*/
+
+header nav#menu-principal nav#autenticacion section {
+    background-color: #2C2C2C;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2.5rem;
+    border: 1px solid #C42C2C;
+    color: white;
+}
+
+/*Haremos el formulario flexible y en forma de columna*/
+
+header nav#menu-principal nav#autenticacion section form {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+}
+
+/*Le daremos color y tamaño a los parrafos del formulario
+Le daremos un borde y un padding para poder hacer la linea de separacion*/
+
+header nav#menu-principal nav#autenticacion section h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #C42C2C;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+/*Asignaremos forma y color a los input del formulario que contengan la clase*/
+
+input.estiloinput {
+    background-color: transparent;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    border-color: white;
+    padding-left: 1rem;
+}
+
+/*Asignaremos forma y color al contenido de los inputs de la clase*/
+
+input.estiloinput::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+
+/*Hacemos flexible el contenedor y le asignaremos un borde y un padding para hacer 
+la linea de separacion*/
+
+header nav#menu-principal nav#autenticacion section#crearcuenta form nav#aceptarterminos {
+    border-bottom: 1px solid #C42C2C;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Le asignaremos tamaño y margen al texto del label*/
+
+header nav#menu-principal nav#autenticacion section#crearcuenta form nav#aceptarterminos label {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+/*Le asignaremos color y tamaño al input de la clase boton.estilo
+Tamabien le daremos tamaño y color al texto que contiene*/
+
+.boton-estilo {
+    color: white;
+    background-color: #C42C2C;
+    border-radius: 0.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-color: white;
+    width: 11rem;
+    align-self: center;
+    text-align: center;
+}
+
+/*Haremos un linea de separacion*/
+
+header nav#menu-principal nav#autenticacion section#iniciarsesion form p#linea {
+    border-bottom: 1px solid #C42C2C;
+    padding-bottom: 0.5rem;
+}
+
+/*Haremos un cursor pointer a la x del login*/
+
+picture img#salir {
+    cursor: pointer;
+}
+
+/*----MENU HAMBURGUESA-----*/
+
+/*Haremos absoluto el menu de la hamburguesa para poder ocultarlo, le asignaremos tamaño,lo haremos flexible, color...
+y lo ocultaremos*/
+
+header nav#menu-principal div#menu-opciones {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0rem;
+    left: -800vw;
+    background-color: #2C2C2C;
+    display: flex;
+    flex-flow: column;
+    z-index: 10001;
+}
+
+/*Haremos flexible el contenedor de la cabecera del menu.
+Le daremos tamaño y color*/
+
+header nav#menu-principal div#menu-opciones div#cabeceramenu {
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*Le asignaremos un tamaño a las imagenes de la cabecera del menu*/
+
+header nav#menu-principal div#menu-opciones div#cabeceramenu img {
+    width: 3rem;
+    height: 2rem;
+}
+
+/*Le asignaremos un tamaño al contenedor que contiene el logo y le asignaremos un 
+margen*/
+
+header nav#menu-principal div#menu-opciones div#cabeceramenu picture#mrlogomenu {
+    flex: 80%;
+    margin-left: 2.2rem;
+}
+
+/*Colocaremos la X a la derecha y le haremos un cursor pointer*/
+
+header nav#menu-principal div#menu-opciones div#cabeceramenu picture #salirmenu {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/*Haremos flexible el contenedor en columna y le daremos un espaciado */
+
+header div#menu-opciones div#menu-contenido {
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+}
+
+/*Asignaremos tamaño, color y espaciado al buscador */
+
+header div#menu-opciones div#menu-contenido>input {
+    height: 2.5rem;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+    padding-left: 1rem;
+}
+
+/*Daremos color texto que contiene el buscador */
+
+header div#menu-opciones div#menu-contenido>input#buscadormenu::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+
+/*Haremos el contenedor flexible en formato de fila, le daremos color,margen y 
+aplicaremos formato a la fuente que contiene*/
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido {
+    display: flex;
+    flex-flow: row wrap;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/*Haremos el menu flexible, le asignaremos un borde y un ancho*/
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-secciones {
+    border-right: 1px solid white;
+    padding-right: 1rem;
+    display: flex;
+    flex-flow: column;
+    padding-left: 0rem;
+    flex: 40%;
+}
+
+/*Haremos el menu flexible, le asignaremos un ancho*/
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-coleccion {
+    flex: 40%;
+    display: flex;
+    flex-flow: column;
+    visibility: hidden;
+}
+
+/*Quitaremos el formato lista, le aplicaremos margen y borde a los li*/
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-secciones li {
+    list-style: none;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 1rem;
+}
+
+/*Quitaremos el borde al quinto hijo */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-secciones li:nth-child(5) {
+    border-bottom: none;
+}
+
+/*Quitaremos el subrayado a los enlaces y le daremos color */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-secciones li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Quitaremos el estilo lista, le aplicaremos margen y tamaño a los li  */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-coleccion li {
+    list-style: none;
+    margin-bottom: 1rem;
+    margin-left: -1rem;
+    font-weight: normal;
+    font-size: 1.3rem;
+}
+
+/*Quitaremos el subrayado a los enlaces y le daremos color */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido ul#menu-coleccion li a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Al pasar el cursor le daremos formato al enlace */
+
+header div#menu-opciones div#menu-contenido nav#opcionescontenido a:hover {
+    border-radius: 0.5rem;
+    border: 1px solid #C42C2C;
+    padding: 0.5rem;
+}
+
+/*Al pasar el cursor le daremos formato al label */
+
+span#colecciones:hover {
+    border-radius: 0.5rem;
+    border: 1px solid #C42C2C;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/*Daremos un color de fondo,margen y lo haremos flexible alineando los hijos al centro */
+
+header div#menu-opciones div#menu-pie {
+    background-color: white;
+    margin-top: 10rem;
+    justify-content: center;
+    display: flex;
+}
+
+/*Haremos flexible el parrafo*/
+
+header div#menu-opciones div#menu-pie p {
+    display: flex;
+    flex-flow: column;
+}
+
+/*---------CARRITO-----------*/
+
+/*Pondremos una posicion absoluta al contenedor padre para poder ocultarlo, le asignaremos tamaño, color y 
+lo haremos flexible*/
+
+header nav#menu-principal div#carrito {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 0rem;
+    left: -800vw;
+    background-color: #E3E3E3;
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2C2C2C;
+    border-radius: 1rem;
+    z-index: 10001;
+}
+
+/*Haremos flexible el contenedor de la cabecera del carrito.
+Le daremos tamaño y color*/
+
+header nav#menu-principal div#carrito nav#cabeceracarrito {
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    padding-top: 0.9rem;
+}
+
+/*Le asignaremos un tamaño a las imagenes de la cabecera del carrito*/
+
+header nav#menu-principal div#carrito nav#cabeceracarrito img {
+    width: 3rem;
+    height: 2rem;
+}
+
+/*Le asignaremos un tamaño al contenedor que contiene el logo y le asignaremos un 
+margen*/
+
+header nav#menu-principal div#carrito nav#cabeceracarrito picture#mrlogocarrito {
+    flex: 80%;
+    margin-left: 2.2rem;
+}
+
+/*Le asignaremos el tamaño y el color al parrafo.
+También lo colocaremos en la ultima posicion del contenedor padre*/
+
+header nav#menu-principal div#carrito nav#cabeceracarrito p {
+    flex: 100%;
+    order: 1;
+    background-color: #2C2C2C;
+    color: white;
+    margin-bottom: auto;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.3rem;
+}
+
+/*Colocaremos la X a la derecha y le haremos un cursor pointer*/
+
+header nav#menu-principal div#carrito nav#cabeceracarrito label {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+/*Ocultaremos el input cerrar*/
+
+header nav#menu-principal div#carrito nav#cabeceracarrito input#cerrarcarrito {
+    display: none;
+}
+
+/*Daremos color y forma al contenedor que tendrán los articulos*/
+
+header nav#menu-principal div#carrito div#articuloscarrito {
+    background-color: #2C2C2C;
+    margin: 1rem;
+    margin-top: 3rem;
+    border: 1px solid #C42C2C;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+/*Asignaremos un tamaño a la imagen del titulo*/
+
+header nav#menu-principal div#carrito div#articuloscarrito div#titulobolsa picture img {
+    width: 2.5rem;
+    height: 3rem;
+}
+
+/*Haremos flexible el contenedor, le daremos tamaño, borde y un margen */
+
+header nav#menu-principal div#carrito div#articuloscarrito div#titulobolsa {
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #C42C2C;
+    margin-bottom: 2rem;
+}
+
+/*Aumentaremos la separacion lateral izquierda y lo alinearemos con la imagen */
+
+header div#carrito div#articuloscarrito div#titulobolsa h2 {
+    margin-left: 1rem;
+    margin-bottom: auto;
+}
+
+/*Haremos el formulario flexible en formato columnas para organizar los elementos que contiene */
+
+header div#carrito div#articuloscarrito form {
+    display: flex;
+    flex-flow: column;
+}
+
+/*Haremos flexible el contenedor, le asignaremos un borde y un espaciado */
+
+header div#carrito div#articuloscarrito form div#contenidopedido {
+    display: flex;
+    flex-flow: row wrap;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+/*Haremos flexible el contenedor en formato columnas, ocupando el 30% */
+
+header div#carrito div#articuloscarrito form div#contenidopedido div#contenidoarticulo {
+    display: flex;
+    flex-flow: column;
+    flex: 30%;
+}
+
+/*Le asignaremos un borde a las imagenes de los articulos y un espaciado */
+
+header div#carrito div#articuloscarrito form div#contenidopedido div#contenidoarticulo picture {
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+}
+
+/*Daremos un tamaño a la imagen del articulo */
+
+header div#carrito div#articuloscarrito form div#contenidopedido div#contenidoarticulo picture img {
+    width: 100%;
+    height: 100%;
+}
+
+/*Daremos forma al select, cambiando su color,borde y espaciado */
+
+header div#carrito div#articuloscarrito form div#contenidopedido div#contenidoarticulo select {
+    margin-top: 1rem;
+    background-color: transparent;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+}
+
+/*Daremos color y tamaño a las opciones del select */
+
+header div#carrito div#articuloscarrito form div#contenidopedido div#contenidoarticulo select:focus option {
+    color: white;
+    background-color: #2C2C2C;
+    border-radius: 0.5rem;
+    padding: 0.2rem;
+}
+
+/*Le daremos margen y tamaño al texto de cada articulo */
+
+header div#carrito div#articuloscarrito form div#contenidopedido div#descripcionarticulo {
+    margin-left: 1rem;
+    flex: 35%;
+}
+
+/*Cambiaremos el tamaño del titulo y lo posicionaremos */
+
+header div#carrito div#articuloscarrito form div#contenidopedido div#descripcionarticulo h3 {
+    font-size: 1rem;
+    margin-top: auto;
+}
+
+/*Cambiaremos el tamaño del parrafo*/
+
+header div#carrito div#articuloscarrito form div#contenidopedido div#descripcionarticulo p {
+    font-size: 0.7rem;
+}
+
+/*Añadiremos margen al primer parrafo del formulario*/
+
+header div#carrito div#articuloscarrito form div#contenidopedido+p {
+    margin-top: 10rem;
+}
+
+/*Clase para hacer flexible los parrafos, cambiar tamaño y dar una separacion entre parrafo y parrafo*/
+
+.parrafoestilo {
+    display: flex;
+    margin-bottom: 0rem;
+    font-size: 0.8rem;
+}
+
+/*Pondremos en negrita,daremos borde y margen al cuarto parrafo */
+
+header div#carrito div#articuloscarrito form p.parrafoestilo:nth-child(4) {
+    border-bottom: 2px solid #C42C2C;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/*Cambiaremos el tamaño de los span y lo colocaremos */
+
+header div#carrito div#articuloscarrito form p.parrafoestilo span {
+    margin-left: auto;
+    font-size: 0.8rem;
+}
+
+/*Daremos un tamaño y le añadiremos un pointer a la imagen X */
+
+header div#carrito div#articuloscarrito form #contenidopedido picture img#quitararticulo {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+/*Daremos un margen al contenedor que contiene la imagen X*/
+
+header div#carrito div#articuloscarrito form #contenidopedido div#descripcionarticulo+picture {
+    margin-left: 0.3rem;
+}
+
+/*Cursor pointer a la x del carrito*/
+
+picture img#salircarrito {
+    cursor: pointer;
+}
+
+/*-------------CONTENIDO PRINCIPAL--------------*/
+
+/*Damos tamaño al principal*/
+
+.bx-wrapper {
+    width: 100%;
+}
+
+/*Haremos el contenedor principal del main flexible en formato columnas y le daremos margenes*/
+
+main nav#secciones {
+    display: flex;
+    flex-flow: column;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Haremos flexible los articulos en formato columna, le daremos color, margenes y le aplicaremos bordes*/
+
+main nav#secciones article.item {
+    display: flex;
+    flex-flow: column;
+    background-color: #2C2C2C;
+    margin-top: 1rem;
+    color: white;
+    border: 1px solid #2C2C2C;
+}
+
+/*Le daremos un tamaño a la imagen del articulo*/
+
+main nav#secciones article.item picture img {
+    width: 100%;
+}
+
+/*Le daremos un tamaño y margen al parrafo del articulo*/
+
+main nav#secciones article.item a h2 {
+    font-size: 1.3rem;
+    margin-left: 1rem;
+    margin-bottom: auto;
+    color: white;
+}
+
+/*Quitamos el subrayado al enlace del articulo*/
+
+main nav#secciones article.item a {
+    text-decoration: none;
+}
+
+/*Le daremos un tamaño y margen al span del articulo*/
+
+main nav#secciones article.item span {
+    font-size: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+/*Haremos el contenedor flexible , le aplicaremos margenes y alinearemos los items hijos
+de manera horizontal y vertical*/
+
+main nav#social {
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+/*Haremos el contenedor flexible , le aplicaremos margenes, alinearemos los items hijos
+de manera horizontal y vertical. Tambien le aplicaremos color de fondo y modificaremos el borde*/
+
+main nav#social nav#iconos-sociales {
+    display: flex;
+    background-color: #2C2C2C;
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/*Le daremos una altura a las imagenes y un maximo a la anchura*/
+
+main nav#social nav#iconos-sociales a img {
+    height: 1.5rem;
+    max-width: 100%;
+}
+
+/*Le daremos un margen a la segunda imagen del contenedor*/
+
+main nav#social nav#iconos-sociales a:nth-child(2) img {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/*Le aplicaremos un tamaño, margenes y borde, tambien lo haremos flexible para poder alinear el texto*/
+
+main nav#social p {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-left: 1rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-flow: column;
+    border-right: 3px solid #C42C2C;
+    margin-right: 1.5rem;
+}
+
+/*-------------PIE--------------*/
+
+/*Le asignaremos un color de fondo, lo haremos flexible en columnas, le daremos un padding y 
+un color para el texto*/
+
+footer {
+    background-color: #2C2C2C;
+    display: flex;
+    flex-flow: column;
+    color: white;
+    padding-top: 1rem;
+}
+
+/*Le daremos tamaño y margen a los parrafos que tengan la clase destacado*/
+
+footer p.destacado {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 1.7rem;
+    margin-bottom: auto;
+}
+
+footer div#infocontacto p#destacadotel {
+    border-top: 1px solid #C42C2C;
+    padding-top: 1rem;
+    margin-left: 1.7rem;
+    margin-right: 1.5rem;
+}
+
+/*Le daremos tamaño y margen a los span que sean hermanos directos del parrafo con la clase destacado*/
+
+footer p.destacado+span {
+    margin-left: 1.7rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/*Haremos el menu flexible en columnas, le asignaremos margenes, padding y borde a la zona de abajo*/
+
+footer ul#menu-contacto {
+    display: flex;
+    flex-flow: column;
+    border-top: 1px solid #C42C2C;
+    border-bottom: 1px solid #C42C2C;
+    padding-bottom: 0.5rem;
+    margin-left: 1.7rem;
+    margin-right: 1.5rem;
+    margin-bottom: 3rem;
+    padding-top: 1.5rem;
+}
+
+/*Quitaremos el estilo de las listas y le daremos margenes para ajustarlo*/
+
+footer ul#menu-contacto li {
+    list-style: none;
+    margin-bottom: 1rem;
+    margin-left: -2rem;
+}
+
+/*Quitaremos el subrayado a los enlaces, aplicaremos margenes y le daremos un color*/
+
+footer ul#menu-contacto li a {
+    color: white;
+    text-decoration: none;
+    margin-right: auto;
+}
+
+/*Haremos el contenedor flexible en formato columnas, le asignaremos una imagen de fondo
+que cubra todo el contenedor, centraremos los items de manera vertical y horizontal y le 
+daremos un tamaño al contenedor*/
+
+footer div#ubicacion {
+    background: url("../img/mapa.png");
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Le asignaremos el alto a la imagen*/
+
+footer div#ubicacion picture img {
+    height: 5rem;
+}
+
+/*Haremos el contenedor flexible en columnas, le daremos un color de fondo,tamaño, 
+centraremos los items de manera vertical y horizontal y le daremos estilo al borde*/
+
+footer div#ubicacion div#info-museo {
+    background-color: #2C2C2C;
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+}
+
+/*Le asignaremos margenes al span del contenedor*/
+
+footer div#ubicacion div#info-museo span {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+
+/*Le asignaremos tamaño al parrafo del contenedor y lo alinearemos abajo*/
+
+footer div#ubicacion div#info-museo p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: auto;
+}
+
+/*Le asignaremos tamaño al small del contenedor y le daremos margenes*/
+
+footer small {
+    margin-top: 4rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+/*Le asignaremos un tamaño, un color de fondo y centramos los items de forma vertical y horizontal*/
+
+footer div#logo {
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+    height: 4rem;
+    align-items: center;
+}
+
+/*Le asignaremos tamaño a la imagen del contenedor*/
+
+footer div#logo picture img {
+    height: 2rem;
+}
+
+/*----FORMULARIO DE CONTACTO----*/
+
+/*Damos margen y tamaño al primer parrafo del contenedor*/
+
+div#contacto nav#enlacecontacto p {
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+/*Quitamos el subrayado del enlace y damos color*/
+
+nav#enlacecontacto p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*Asignamos tamaño, margen y color a la seccion*/
+
+div#contacto section#contenidocontacto {
+    background-color: #2C2C2C;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+    border: 1px solid #C42C2C;
+    padding-bottom: 2rem;
+}
+
+.error{
+
+    color:#C42C2C;
+    visibility:hidden;
+    font-size:0.8rem;
+}
+
+/*Asignamos tamaño a la fuente y le asignamos un borde en la parte inferior
+para hacer la linea separadora*/
+
+div#contacto section#contenidocontacto h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #C42C2C;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Hacemos el formulario flexible y le añadimos un espaciado*/
+
+div#contacto section#contenidocontacto form {
+    display: flex;
+    flex-flow: column;
+    padding: 1rem;
+}
+
+span#caracteres{
+    margin-bottom: 1rem;
+   
+}
+
+
+/*Le aplicamos al textarea un tamaño,margen, color, borde y espaciado
+Tambien hacemos que ese tamaño no se redimensione*/
+
+section#contenidocontacto form textarea {
+    width: 100%;
+    resize: none;
+    background-color: transparent;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    border-color: white;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+/*Cambiamos de color el contenido del textarea y cambiamos 
+el tamaño de la fuente que lo contiene*/
+
+textarea::placeholder {
+    color: white;
+    font-size: 1rem;
+}
+
+/*Hacemos el contenedor flexible para que queden alineados
+le aplicamos un borde y un espaciado para que podamos crear la separacion
+(linea roja)*/
+
+div#contacto section#contenidocontacto form nav#terminos {
+    border-bottom: 1px solid #C42C2C;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Le aplicamos un margen al label del contenedor #terminos*/
+
+div#contacto section#contenidocontacto form nav#terminos label {
+    margin-left: 0.3rem;
+}
+
+/*--------INFORMACIÓN---------*/
+
+/*Aplicamos al contenedor un color de fondo,borde y lo 
+haremos flexible en columnas*/
+
+main div#informacion {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+}
+
+/*Clase para justificar el texto y añadir un espaciado al articulo*/
+
+.contenidoinfo {
+    padding: 1.5rem;
+}
+
+/*Aplicamos borde y espaciado al titulo del articulo*/
+
+article.contenidoinfo h2 {
+    border-bottom: 2px solid #C42C2C;
+    padding-bottom: 1rem;
+}
+
+/*Boton volver arriba*/
+
+div#volverarriba {
+    width: 8rem;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    position: fixed;
+    opacity: 0.9;
+    display: none;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+}
+
+div#volverarriba>a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+    color: #C42C2C;
+    font-weight: bold;
+}
+
+/*--------ESCULTURAS---------*/
+
+/*Damos tamaño al autor de la obra*/
+
+main nav#enlacecontacto p a+small {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+/*Cambiamos el tamaño al h2*/
+
+div#tituloesculturas h2 {
+    font-size: 2rem;
+}
+
+/*Damos estilo al contenedor principal*/
+
+main div#contenedoresculturas {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+}
+/*Haremos flex el contenedor que tendrá el titulo y las lineas*/
+
+div#tituloesculturas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Damos estilo a la etiqueta hr que serán nuestras lineas */
+
+div#tituloesculturas hr {
+    height: 0.1rem;
+    border: 1px solid #C42C2C;
+    width: 7rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Haremos flexible el contenedor que tendrá las diferentes esculturas*/
+nav#esculturas {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 2rem;
+}
+/*Creamos una clase para cada articulo que contendrá las imagenes,titulo... de la escultura*/
+
+.itemsesculturas {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+/*Creamos una clase para dar tamaño a las imagenes y asignarle un borde*/
+.imagenesculturas { 
+  width:20rem;
+  border:1px solid #2C2C2C;
+}
+
+/*Daremos estilo a las lineas separatorias de cada articulo*/
+article.itemsesculturas hr {
+    height: 0.1rem;
+    border: 1px solid #C42C2C;
+    width: 10rem;
+    margin-top: 1.5rem;
+}
+
+/*Pondremos en negrita el span*/
+article.itemsesculturas span {
+    font-weight: bold;
+}
+
+/*--------CUADROS---------*/
+
+/*Modificamos el plugin para darle profundidad a los cuadros*/
+
+/*Creamos varias clases*/
+.hidden {
+    overflow: hidden;
+    border:1px solid #2C2C2C;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+}
+
+.img:hover {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+}
+
+
+/*Haremos flexible el contenedor de los cuadros y le daremos un color*/
+main div#contenedorcuadros {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    flex-flow: column;
+}
+
+/*Haremos flexible el contenedor que tendrá el titulo y las lineas */
+
+div#titulocuadros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Damos estilo a la linea separatoria del titulo*/
+
+div#titulocuadros hr {
+    height: 0.1rem;
+    border: 1px solid #C42C2C;
+    width: 7rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Haremos flexible el contenedor que tendrá los articulos*/
+
+nav#cuadros {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/*Creamos una clase para cada articulo donde lo haremos flexible dicho contenedor*/
+
+.itemscuadros {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*Damos estilo a las lineas separatorias*/
+
+article.itemscuadros hr {
+    height: 0.1rem;
+    border: 1px solid #C42C2C;
+    width: 10rem;
+    margin-top: 1.5rem;
+}
+
+/*Damos tamaño y margen al parrafo del articulo*/
+article.itemscuadros p {
+    margin-bottom: 0.4rem;
+    font-size: 0.8rem;
+}
+/*Posicionamos el titulo de cada cuadro*/
+article.itemscuadros h3 {
+    margin-top: auto;
+}
+/* Damos tamaño y margen a los span de los articulos*/
+article.itemscuadros span {
+    font-size: 0.8rem;
+    margin-top: -0.9rem;
+}
+
+/*------VISITANOS------*/
+
+/*Damos margen y tamaño al primer parrafo del contenedor*/
+
+nav#enlacevisita p {
+    margin-left: 1rem;
+}
+
+/*Quitamos el subrayado del enlace y damos color*/
+
+nav#enlacevisita p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* Damos color y tamaño a los small*/
+nav#enlacevisita p small {
+    color: black;
+    font-size: 0.9rem;
+}
+/* Haremos flexible el contenedor que tendrá las secciones*/
+div#contenedorvisita {
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: column;
+}
+
+
+/*Damos estilo y haremos flexible las secciones */
+main section.itemsvisita {
+    background-color: white;
+    border: 1.5px solid black;
+    display: flex;
+    flex-flow: column;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+}
+
+/*Creamos una clase para el titulo de cada seccion*/
+.titulovisita {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #C42C2C;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/*Creamos una clase para los iconos de los titulos*/
+.imgvisita {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+/*Damos margen a los h2*/
+.titulovisita h2 {
+    margin-left: 1rem;
+}
+/*Damos margen a los h3*/
+section.itemsvisita h3 {
+    margin-left: 0.5rem;
+}
+
+/*Damos margen a los p de las secciones*/
+section.itemsvisita p {
+    margin-left: 0.5rem;
+    margin-top: auto;
+}
+
+/* Haremos flexible y daremos estilo al contenedor que dispondrá las entradas de las colecciones temporales*/
+div#colecciontemporal {
+    display: flex;
+    flex-flow: column;
+    border-bottom: 2px solid #C42C2C;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+/*Damos margen al contendor*/
+div#visitaescolar {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+/*Creamos una clase donde haremos flexible los contenedores que la tengan*/
+div.elegirvisita {
+    display: flex;
+    align-items: center;
+}
+
+/*Damos tamaño a las imagenes de los botones*/
+div.elegirvisita button img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/*Damos estilo al boton */
+div.elegirvisita button {
+    display: flex;
+    background-color: #C42C2C;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    border: transparent;
+    justify-content: center;
+    margin-left: 0.5rem;
+    cursor:pointer;
+}
+
+/*Pondremos en negrita los parrafos*/
+div.elegirvisita p {
+    font-weight: bold;
+}
+
+/*Damos tamaño a los span*/
+div.elegirvisita p span {
+    font-weight: normal;
+}
+
+/*Damos una imagen de fondo al contenedor,lo hacemos flexible y damos estilo*/
+div#comollegar {
+    background: url("../img/mapa.png");
+    height: 15rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #2C2C2C;
+    margin-top: 1rem;
+}
+
+/*Le asignaremos el alto a la imagen*/
+
+div#comollegar picture img {
+    height: 3rem;
+}
+
+/*------TIENDA------*/
+
+/*Damos color de fondo y borde al contenedor que tendrá todos los articulos*/
+div#tienda {
+    background-color: white;
+    border: 1px solid #2C2C2C;
+}
+
+/* Quitaremos el subrayado del enlace y daremos color*/
+nav#enlacetienda p a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/*Damos color y tamallo a los small */
+nav#enlacetienda p small {
+    color: black;
+    font-size: 0.8rem;
+}
+
+/*Haremos flexible el contenedor que tendrá el titulo y alinearemos los items*/
+div#titulotienda {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+/*Damos margen a los h2 hermanos del contenedor fracciontienda */
+div#titulotienda div#fracciontienda+h2 {
+    margin-top: 0.1rem;
+    text-align: center;
+    margin-bottom: 0.1rem;
+}
+
+/*Haremos flexible le contenedor y alineamos los items*/
+div#titulotienda div#fracciontienda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Damos tamaño y color a las lineas separatorias del titulo*/
+div#fracciontienda hr {
+    height: 0.1rem;
+    border: 1px solid #C42C2C;
+    width: 50%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Damos color y margen al h2*/
+div#fracciontienda h2 {
+    color: #C42C2C;
+    margin-left: 1rem;
+}
+
+/*Haremos flexible le contenedor y alineamos los items*/
+div#titulotienda div#fracciononline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Damos tamaño y color a las lineas separatorias*/
+div#fracciononline hr {
+    height: 0.1rem;
+    border: 1px solid #C42C2C;
+    width: 50%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Damos color y margen al h2*/
+div#fracciononline h2 {
+    color: #C42C2C;
+    margin-right: 1rem;
+}
+
+/*Haremos flexible le contenedor,alineamos los items y daremos un espaciado*/
+div#productostienda {
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*Haremos flexible cada articulo y un margen*/
+div#productostienda article.producto {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/*Damos borde y tamaño a las imagenes de cada producto*/
+div#productostienda article.producto img {
+    border: 1px solid #2C2C2C;
+    width: 100%;
+    height: auto;
+}
+
+/*Haremos flexible el contenedor y le daremos tamaño y color */
+div#productostienda article.producto div.bodyproducto {
+    background-color: #2C2C2C;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+/*Damos margen y tamaño a los h2*/
+div#productostienda article.producto div.bodyproducto h2 {
+    margin-left: 0.5rem;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/*Damos margen al span*/
+div#productostienda article.producto div.bodyproducto span {
+    margin-left: 0.5rem;
+}
+
+/*Damos margen,color,borde y espaciado a los botones de los productos*/
+div#productostienda article.producto div.bodyproducto button {
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: 0.5rem;
+    background-color: #C42C2C;
+    color: white;
+    border-radius: 0.3rem;
+    border-color: white;
+    padding: 0.3rem;
+    text-align: center;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/*-----MUSEO-------*/
+
+/*Haremos flexible el contenedor*/
+div#contenedorinstitucion {
+    display: flex;
+    flex-flow: column;
+}
+
+/*Hacemos flexible el contenedor , asignaremos un tamaño y color*/
+div#contenedorinstitucion section.contenedormuseo {
+    background-color: white;
+    border: 1px solid #2C2C2C;
+    display: flex;
+    flex-flow: column;
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+/*Creamos una clase donde haremos flexible el contenedor y alinearemos los items*/
+div.titulohistoria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Damos un tamaño y color a la linea separatoria*/
+div.titulohistoria hr {
+    height: 0.1rem;
+    border: 1px solid #C42C2C;
+    width: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Creamos una clase para dar tamaño y un borde a cada portada*/
+.portadahistoria {
+    width: 100%;
+    border: 1px solid #2C2C2C;
+}
+
+/*Haremos flexible el contenedor en modo columnas*/
+footer div#infocontacto {
+    display: flex;
+    flex-flow: column;
+}
+
+/*Ocultamos la seccion*/
+nav#secciondesplegado {
+    display: none;
+}
+
+/* -----VIDEO-----*/
+
+section#contenedorvideo {
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+}
+
+/*Le asignamos un tamaño a los iconos del reproductor de video*/
+
+div#contenido button img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/*Hacemos los botones transparente,le quitamos el borde y le añadimos un cursor pointer*/
+
+div#contenido button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+/*Hacemos flexible el contenedor, damos tamaño y color*/
+
+div#contenido {
+    display: flex;
+    flex-flow: nowrap;
+    padding: 0.1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Damos tamaño y margen a la barra de volumen*/
+
+div#contenido input#volumen {
+    width: 3rem;
+    margin-right: 0.3rem;
+}
+
+/*Hacemos flexible el contenedor en forma de columna,le aplicamos color 
+    y un borde personalizado */
+
+div#aplicacionreproductor {
+    border-radius: 0rem 0rem 1rem 1rem;
+    display: flex;
+    flex-flow: column;
+    border: 1px solid black;
+    background-color: white;
+    width: 100%;
+}
+
+/*Damos tamaño al video*/
+
+video#video {
+    width: 100%;
+}
+
+section.itemvideo {
+    margin-bottom: 1.5rem;
+}
+
+main>picture {
+    width: 100%;
+    align-self: center;
+}
+
+main>picture img {
+    width: 100%;
+}
+
+/*Damos estilo al cartel*/
+
+span.cartel{
+    background-color: #C42C2C;
+    border-radius: 0.4rem;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 25;
+    padding: 0.5rem;
+    height: auto;
+    display: none;
+    font-size: bold;
+    color:white;
+    
+}
+
+/*------VERSION TABLET------*/
+
+@media all and (min-width:800px) {
+
+  /*Damos ancho y alineamos al centro las imagenes que estén justo debajo del main*/
+    main>picture {
+        width: 80%;
+        align-self: center;
+    }
+
+    /*MOdificamos la clase cambiando el tamaño*/
+    .imagenesculturas { 
+        width:25rem;
+       
+      }
+      
+    /*Titulo cabecera */
+    h1.nombremuseo a {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    h1.nombremuseo strong {
+        margin-left: 0.5rem;
+    }
+    /*Footer */
+    footer div#infocontacto {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    /* cambiamos el margen*/
+    footer p.destacado {
+        margin-left: 0rem;
+    }
+
+    footer div#infocontacto p#destacadotel {
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    footer p.destacado+span {
+        border-bottom: none;
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+    /*Cambiamos los bordes del contenedor*/
+    footer ul#menu-contacto {
+        border-bottom: none;
+        border-top: none;
+        border-left: 1px solid #C42C2C;
+        padding-top: 0rem;
+        padding-left: 4rem;
+    }
+    footer div#infocontacto p#destacadotel {
+        border-top: none;
+    }
+    /*----CONTACTO----*/
+
+    /*Haremos flexible el div*/
+    div#contacto {
+        display: flex;
+        flex-flow: column;
+    }
+    /*Cambiamos el tamaño y lo alineamos al centro*/
+    div#contacto section#contenidocontacto {
+        width: 60%;
+        align-self: center;
+    }
+    /*---------MUSEO REZADRI-------*/
+
+    /*Alineamos los articulos al centro y le cambiamos el tamaño*/
+    main nav#secciones article.item {
+        align-self: center;
+        width: 70%;
+    }
+    main {
+        display: flex;
+        flex-flow: column;
+    }
+    /*Clase para el slider donde le cambiamos el tamaño y lo posicionamos*/
+    .bx-wrapper {
+        width: 80%;
+        align-self: center;
+    }
+    /*---------CUADROS---------*/
+
+    /*Modificamos el tamaño y alineamos al centro*/
+    .itemscuadros {
+        align-self: center;
+        width: 70%;
+    }
+    /*----------VISITA----------*/
+
+    /*Modificamos el tamaño y alineamos al centro*/
+    main section.itemsvisita {
+        align-self: center;
+        width: 70%;
+    }
+    /*---------MUSEO------------*/
+
+    /*Modificamos el tamaño y alineamos al centro*/
+    div#contenedorinstitucion section.contenedormuseo {
+        align-self: center;
+        width: 70%;
+    }
+    /*----------TIENDA------------*/
+
+    /*Alineamos los productos y le damos un tamaño*/
+    div#productostienda article.producto {
+        flex: 0 40%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    div#productostienda article.producto>* {
+        flex: 0 40%;
+    }
+    /*---------VIDEO--------*/
+    /*Modificamos el tamaño y alineamos al centro*/
+    main section.itemvideo {
+        align-self: center;
+        width: 70%;
+    }
+    /*Le asignamos un tamaño a los iconos del reproductor de video*/
+    div#contenido button img {
+        height: 2rem;
+        width: 2rem;
+    }
+}
+
+/*-------VERSION ESCRITORIO--------*/
+
+@media all and (min-width:1280px) {
+
+    /*Modificamos el tamaño y alineamos al centro*/
+    main>picture {
+        width: 60%;
+        align-self: center;
+    }
+
+    /*Le asignamos un borde y un espaciado al titulo*/
+    h1.nombremuseo {
+        border-right: 2px solid #C42C2C;
+        padding-right: 1rem;
+        margin-left: 1rem;
+        
+    }
+
+    /*Ocultamos la hamburguesa*/
+    nav#menu-principal picture img#hamburguesa {
+        display: none;
+    }
+
+    /*Mostramos la seccion del menu y lo haremos flexible*/
+    nav#secciondesplegado {
+        display: block;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    nav#secciondesplegado ul#opciondesplegado {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    /*Quitamos el estilo de lista a los li*/
+    nav#secciondesplegado ul#opciondesplegado li {
+        list-style: none;
+        margin: 1rem;
+    }
+    /*Haremos flexible los li*/
+    li#colecciondesplegado {
+        display: flex;
+        cursor: pointer;
+    }
+    /*Quitamos el subrayado a los enlaces*/
+    nav#secciondesplegado ul#opciondesplegado li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /*Damos margen a el contenedor*/
+    span#coleccionspan {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+    /*Ocultaremos los hijos de la seccion coleccion para mostrarla con jquery*/
+    .hijoscoleccion {
+        display: none;
+        cursor: pointer;
+    }
+    /*-----INFORMACIÓN-----*/
+    main {
+        display: flex;
+        flex-flow: column;
+    }
+    div#informacion {
+        width: 70%;
+        align-self: center;
+    }
+    /*-----PAGINA PRINCIPAL------*/
+    /*Damos tamaño y posicion al slider*/
+    .bx-wrapper {
+        width: 70%;
+        align-self: center;
+    }
+    /*Asignamos tamaño y margen*/
+    main nav#secciones article.item {
+        width: 50%;
+        margin: 1rem;
+    }
+    main nav#secciones article.item img {
+        width: 30rem;
+        height: 30rem;
+    }
+    /*------CUADROS------*/
+
+    /*Asignamos un ancho a los items*/
+    .itemscuadros {
+        width: 50%;
+    }
+    /*Damos tamaño y posicion a los contenedores*/
+    main div#contenedorcuadros {
+        width: 80%;
+        align-self: center;
+    }
+
+    /*-----ESCULTURAS-----*/
+
+    main div#contenedoresculturas {
+        width: 70%;
+        align-self: center;
+    }
+    /*--------MUSEO-------*/
+
+    /*Haremos flexible el contenedor y le daremos un espaciado*/
+    div#contenedorinstitucion {
+        flex-flow: row wrap;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /*Daremos un tamaño a cada seccion */
+    div#contenedorinstitucion section.contenedormuseo {
+        align-self: auto;
+        margin: 1rem;
+        flex: 45%;
+    }
+
+    /*Damos tamaño a las imagenes*/
+    div#contenedorinstitucion section.contenedormuseo picture img {
+        width: 100%;
+        height: auto;
+    }
+    /*------------VISITA-----------*/
+
+    /*Damos un ancho al contenedor*/
+    main section.itemsvisita {
+        width: 55%;
+    }
+    /*---------TIENDA-------------*/
+
+    /*Haremos que los articulos se muestren de 3 en 3*/
+    div#productostienda article.producto {
+        flex: 0 25%;
+    }
+    /*--------CARRITO-----------*/
+
+    /*Cambiamos el ancho y posicionaremos el contenedor*/
+    div#articuloscarrito {
+        width: 50%;
+        align-self: center;
+    }
+    /*---------LOGIN---------*/
+
+    /*Haremos flexible en modo columnas el contenedor*/
+    header nav#menu-principal nav#autenticacion {
+        display: flex;
+        flex-flow: column;
+    }
+    /*Damos tamaño y posicionamos el contenedor*/
+    nav#contenidologin {
+        width: 50%;
+        align-self: center;
+    }
+    /*-------VIDEO--------*/
+
+    /*Damos un tamaño al video*/
+    main section.itemvideo {
+        width: 55%;
+    }
+
+
+
+}
+

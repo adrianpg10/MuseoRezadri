@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <title>tienda</title>
+    <meta charset="utf-8">
+    <meta name="lang" content="es-ES" />
+    <meta content="Aplicaciones Web" name="museo rezadri" />
+    <link rel="stylesheet" type="text/css" href="css/estilomuseo.css">
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=500, initial-scale=1, maximum-scale=1">
+    <link href="Courier_Prime/CourierPrime-Regular.ttf" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/script-museorezadri.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <nav id="redes-sociales">
+            <p>ES&#x25BE;</p>
+            <a href="#"><img src="img/youtube.png" alt="youtube" id="youtube" /></a>
+            <a href="#"><img src="img/twitter.png" alt="twitter" id="twitter" /></a>
+            <a href="#"><img src="img/instagram.png" alt="instagram" id="instagram" /></a>
+        </nav>
+
+        <nav id="menu-principal">
+            <picture>
+                <img src="img/menu.svg" alt="hamburguesa" id="hamburguesa">
+            </picture>
+            <div id="menu-opciones">
+                <div id="cabeceramenu">
+                    <picture id="mrlogomenu">
+                        <img src="img/logo.png" alt="logo" id="mrmenu" />
+                    </picture>
+                    <picture>
+                        <img src="img/boton-cerrar.svg" alt="salir" id="salirmenu" />
+                    </picture>
+                </div>
+                <div id="menu-contenido">
+                    <input type="search" name="buscador" placeholder="Buscar..." id="buscadormenu" />
+                    <nav id="opcionescontenido">
+                        <ul id="menu-secciones">
+                            <li><a href="museorezadri.html">INICIO</a></li>
+                            <li><span id="colecciones">COLECCION </span></li>
+                            <li><a href="./visita.html">VISITA</a></li>
+                            <li><a href="./tienda.html">TIENDA</a></li>
+                            <li><a href="./museo.html">MUSEO</a></li>
+                        </ul>
+                        <ul id="menu-coleccion">
+                            <li><a href="./cuadros.html">CUADROS</a></li>
+                            <li><a href="./esculturas.html">ESCULTURAS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+                <div id="menu-pie">
+                    <p class="nombretitulo">Museo <strong>Rezadri</strong></p>
+                </div>
+
+
+            </div>
+            <h1 class="nombremuseo"><a href="./museorezadri.html">Museo <strong>Rezadri</strong></a></h1>
+
+
+            <nav id="secciondesplegado">
+                <ul id="opciondesplegado">
+                    <li><a href="museorezadri.html">INICIO</a></li>
+                    <li id="colecciondesplegado">
+                        <span >COLECCIÓN</span>
+                        <span  id="coleccionspan" class="hijoscoleccion"><a href="./cuadros.html">CUADROS</a></span>
+                        <span class="hijoscoleccion"><a href="./esculturas.html">ESCULTURAS</a></span>
+  
+                    </li>
+
+                    <li><a href="./visita.html">VISITA</a></li>
+                    <li><a href="./tienda.html">TIENDA</a></li>
+                    <li><a href="./museo.html">MUSEO</a></li>
+                </ul>
+
+
+            </nav>
+            <input type="checkbox" id="login-menu" />
+            <nav id="login">
+                <label for="login-menu">
+                    <picture>
+                        <img src="img/login.png" alt="user" id="user">
+                    </picture>
+                    <span>Login</span>
+                </label>
+            </nav>
+
+            <nav id="autenticacion">
+                <nav id="cabeceralogin">
+                    <picture id="mrlogo">
+                        <img src="img/logo.png" alt="logo" id="mr" />
+                    </picture>
+                    <picture>
+                        <img src="img/boton-cerrar.svg" alt="salir" id="salir" />
+                    </picture>
+                    <p>AUTENTICACION</p>
+                </nav>
+                <nav id="contenidologin">
+
+                    <section id="crearcuenta">
+                        <h2>CREA TU CUENTA</h2>
+                        <form action="contacto.html" method="post">
+                            <input type="email" class="estiloinput" name="email" id="email"
+                                placeholder="CORREO ELECTRÓNICO" pattern="^[-\w.]+@{1}[-a-z0-9]+[.]{1}[a-z]{2,5}$"
+                                required />
+                                <p class="error">Escribe un correo electrónico* </p>
+                            <input type="password" class="estiloinput" name="clave" id="clave" placeholder="CONTRASEÑA"
+                                required />
+                                <p class="error">Escribe una contraseña* </p>
+                            <input type="password" class="estiloinput" name="repetir-clave" id="repetir-clave"
+                                placeholder="REPETIR CONTRASEÑA" required />
+                                <p class="error">Vuelva a escribir la contraseña* </p>
+                            <nav id="aceptarterminos">
+                                <input type="checkbox" id="acepto" />
+                                <label for="acepto"> Acepto la política de privacidad</label>
+                            </nav>
+                            <input type="submit" class="boton-estilo" value="CREA TU CUENTA" name="crear-cuenta">
+                        </form>
+                    </section>
+
+                    <section id="iniciarsesion">
+                        <h2>¿YA ESTÁS REGISTRADO?</h2>
+                        <form action="contacto.html" method="post">
+                            <input type="email" class="estiloinput" name="email" id="email-login"
+                                placeholder="CORREO ELECTRONICO" pattern="^[-\w.]+@{1}[-a-z0-9]+[.]{1}[a-z]{2,5}$"
+                                required />
+                                <p class="error">Escribe un correo electrónico* </p>
+                            <input type="password" class="estiloinput" name="clave" id="clave-login"
+                                placeholder="CONTRASEÑA" required />
+                                <p class="error">Escribe una contraseña* </p>
+                            <p id="linea"></p>
+                            <input type="submit" class="boton-estilo" value="INICIAR SESIÓN" name="iniciar-sesion">
+                        </form>
+                    </section>
+
+                </nav>
+
+
+            </nav>
+
+            <input type="checkbox" id="lupa-busca" />
+            <label for="lupa-busca">
+                <img src="img/buscar.svg" alt="lupa" id="lupa">
+            </label>
+            <input type="search" name="buscador" placeholder="Buscar..." id="buscador" />
+
+
+            <picture>
+                <img src="img/bolsacompra.png" alt="bolsacompra" id="bolsacompra">
+            </picture>
+
+
+            <div id="carrito">
+                <nav id="cabeceracarrito">
+
+                    <picture id="mrlogocarrito">
+                        <img src="img/logo.png" alt="logo" id="mrcarrito" />
+                    </picture>
+                    <picture>
+                        <img src="img/boton-cerrar.svg" alt="salir" id="salircarrito" />
+                    </picture>
+                    <p>BOLSA DE LA COMPRA</p>
+
+                </nav>
+
+
+                <div id="articuloscarrito">
+                    <div id="titulobolsa">
+                        <picture>
+                            <img src="img/bolsacomprablanco.png" alt="bolsacompra" id="bolsacompratitulo">
+                        </picture>
+                        <h2>PRODUCTOS</h2>
+                    </div>
+
+                    <form method="post" action="contacto.html">
+                        <div id="contenidopedido">
+                            <div id="contenidoarticulo">
+                                <picture>
+                                    <img src="img/audiolibro.jpg" alt="imagenproducto" id="imagenproducto">
+                                </picture>
+                                <select id="numeroarticulos" name="articulos">
+
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div id="descripcionarticulo">
+                                <h3>Titulo del producto</h3>
+                                <p>Descripcion del producto</p>
+                            </div>
+                            <picture>
+                                <img src="img/boton-cerrarblanco.svg" alt="quitararticulo" id="quitararticulo">
+                            </picture>
+
+                        </div>
+
+                        <p class="parrafoestilo">Valor del pedido<span>3,99€</span></p>
+                        <p class="parrafoestilo">Entrega<span>3,99€</span></p>
+                        <p class="parrafoestilo">Total: <span>7,99€</span></p>
+
+                        <input type="submit" class="boton-estilo" value="REALIZAR PEDIDO" name="realizarpago">
+
+                    </form>
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </nav>
+
+    </header>
+    <main>
+
+        <nav id="enlacetienda">
+            <p>
+                <a href="museorezadri.html">Inicio</a> &#x25B6; <small>Tienda</small>
+            </p>
+        </nav>
+        <div id="tienda">
+            <div id="titulotienda">
+                <div id="fracciontienda">
+                    <h2>T I E N D A</h2>
+                    <hr />
+                </div>
+                <h2>Museo Rezadri</h2>
+                <div id="fracciononline">
+                    <hr />
+                    <h2>O N L I N E</h2>
+                </div>
+            </div>
+
+            <div id="productostienda">
+
+                <article class="producto">
+
+                    <img src="img/camiseta.jpg" alt="camiseta" class="imgproducto" />
+
+                    <div class="bodyproducto">
+                        <h2>Camiseta "la mano en el pecho"</h2>
+                        <span>20,00€</span>
+                        <button>AÑADIR</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+                    <img src="img/cuaderno.jpg" alt="cuaderno" class="imgproducto" />
+                    <div class="bodyproducto">
+                        <h2>Cuaderno "Las meninas"</h2>
+                        <span>7,50€</span>
+                        <button>AÑADIR</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+
+                    <img src="img/mousepad.jpg" alt="mousepad" class="imgproducto" />
+
+                    <div class="bodyproducto">
+                        <h2>Mousepad "Las meninas"</h2>
+                        <span>7,00 €</span>
+                        <button>AÑADIR</button>
+                    </div>
+                </article>
+                <article class="producto">
+
+                    <img src="img/abanico.jpg" alt="abanico" class="imgproducto" />
+
+                    <div class="bodyproducto">
+                        <h2>Abanico Geometría s. XV</h2>
+                        <span>9,00 €</span>
+                        <button>AÑADIR</button>
+                    </div>
+                </article>
+                <article class="producto">
+
+                    <img src="img/inmaculada.jpg" alt="inmaculada" class="imgproducto" />
+
+                    <div class="bodyproducto">
+                        <h2>Inmaculada Concepción</h2>
+                        <span>16,00 €</span>
+                        <button>AÑADIR</button>
+                    </div>
+                </article>
+
+                <article class="producto">
+
+                    <img src="img/agenda.jpg" alt="agenda" class="imgproducto" />
+
+                    <div class="bodyproducto">
+                        <h2>Agenda "Las meninas"</h2>
+                        <span>12,00 €</span>
+                        <button>AÑADIR</button>
+                    </div>
+                </article>
+              
+
+            </div>
+
+            <span class="cartel">AÑADIDO A LA CESTA</span>
+
+        </div>
+
+
+        <nav id="social">
+            <p>Redes <strong>Sociales</strong></p>
+            <nav id="iconos-sociales">
+                <a href="#"> <img src="img/instagram.png" alt="instagram" id="instagramsocial" /></a>
+                <a href="#"> <img src="img/youtube.png" alt="youtube" id="youtubesocial" /></a>
+                <a href="#"> <img src="img/twitter.png" alt="twitter" id="twittersocial" /></a>
+            </nav>
+        </nav>
+
+
+    </main>
+
+    <footer>
+        <div id="infocontacto">
+            <div id="horariotel">
+                <p class="destacado">Horario:</p>
+                <span>De Lunes 9:00 Am a Sabado 15:00 Pm</span>
+                <p class="destacado" id="destacadotel">Teléfono:</p>
+                <span>900 80 80 70</span>
+            </div>
+            <ul id="menu-contacto">
+                <li><a href="informacion.html">Aviso legal</a></li>
+                <li><a href="informacion.html">Política de privacidad</a></li>
+                <li><a href="informacion.html">Política de cookies</a></li>
+                <li><a href="informacion.html">Modelo semántico digital</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+        </div>
+        <div id="ubicacion">
+            <picture>
+                <img src="img/ubicacion.png" alt="ubicacion" id="encuentranos" />
+            </picture>
+            <div id="info-museo">
+                <p>Museo Rezadri</p>
+                <span>Palacio de Congresos C/victoria,8</span>
+            </div>
+
+        </div>
+
+        <small>© Copyright Museo Rezadri.</small>
+
+        <div id="logo">
+
+            <picture>
+                <img src="img/logo.png" alt="logo" id="logo-icono" />
+            </picture>
+
+        </div>
+    </footer>
+    <div id="volverarriba"><a href="#top">VOLVER ARRIBA</a></div>
+</body>
+
+</html>
