@@ -1,6 +1,6 @@
 ## Descripción
 
-Buscador de items realizado en Javascript.
+Landing Page sin funcionalidad hecha con html y css.
 
 ## Autor ✒️
 **Adrián Pérez Gómez** - *Redes*
